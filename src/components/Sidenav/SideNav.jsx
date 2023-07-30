@@ -37,7 +37,7 @@ const SideNav = () => {
           <NavLink
             to="/bookmarks"
             className={({ isActive }) =>
-              isActive ? "active py-3" : "inactive py-3"
+              isActive ? "py-3 font-bold" : "inactive py-3"
             }
           >
             <Path Icon={BiBookmark} size={24} name={"Bookmarks"} />

@@ -23,22 +23,6 @@ export const posts = [
     comments: [],
   },
   {
-    _id: "126faa8e-239c-4ef4-9320-93d416685746",
-    content:
-      "🌟 Big announcement! 🎉I've just finished building my dazzling jewellery website using React! 💍💎It's been an amazing adventure, merging my love for web development and exquisite accessories. Explore the collection, share your thoughts. #React #webdevelopment #programming #FrontEnd",
-    mediaURL:
-      "https://res.cloudinary.com/dwdsvmvkq/video/upload/v1687272784/Social%20Media/QBxlHtDX6hSLXsy9_rclper.mp4",
-    likes: {
-      likeCount: 53,
-      likedBy: [],
-      dislikedBy: [],
-    },
-    username: "TheIndianGirl56",
-    createdAt: "2023-06-14T20:11:00+05:30",
-    updatedAt: "2023-06-14T20:11:00+05:30",
-    comments: [],
-  },
-  {
     _id: "f1a16ff7-815c-4529-aa72-97d17f5437c2",
     content: `Dear Government or whoever is authorized, 
 
@@ -61,23 +45,6 @@ export const posts = [
     comments: [],
   },
   {
-    _id: "6e628b4f-3f84-4322-8914-0cc37f27a6a3",
-    content: `Tried my hands on another tutorial. Credits to @VarunMayya and @UnrealSensei. You are make my learning easy everyday.
-    
-    #madewithUnreal`,
-    mediaURL:
-      "https://res.cloudinary.com/dwdsvmvkq/video/upload/v1687273193/Social%20Media/N5qCMBoBRXj7Vhg1_q1xnax.mp4",
-    likes: {
-      likeCount: 16,
-      likedBy: [],
-      dislikedBy: [],
-    },
-    username: "BeingPoem",
-    createdAt: "2020-12-06T20:41:00+05:30",
-    updatedAt: "2020-12-06T20:41:00+05:30",
-    comments: [],
-  },
-  {
     _id: "c56eb64c-578b-419f-9f6a-ff8ffed47d2f",
     content: `Finally the wait is over. Very excited to start the first lecture tomorrow.
     @neogcamp @tanaypratap @ch_akanksha @tanviprya
@@ -96,28 +63,6 @@ export const posts = [
     comments: [],
   },
   {
-    _id: "db6b0d30-7a9f-4f4d-89a3-56c827536112",
-    content: `Namaste!🤩🙏
-
-    I just completed READHAVEN, my first React e-commerce web app dedicated to books!🚀📚
-    
-    Kindly spread the word & share your love for books!📢
-    Feedback & suggestions are highly appreciated! 💙
-    
-    Feel free to explore & let me know what you think! Happy book shopping!🛒`,
-    mediaURL:
-      "https://res.cloudinary.com/dwdsvmvkq/video/upload/v1687274033/Social%20Media/Screen_Recording_dniohf.mp4",
-    likes: {
-      likeCount: 80,
-      likedBy: [],
-      dislikedBy: [],
-    },
-    username: "Niharika_twt",
-    createdAt: "2023-06-03T16:53:00+05:30",
-    updatedAt: "2023-06-03T16:53:00+05:30",
-    comments: [],
-  },
-  {
     _id: "3f5f4e7a-df8c-4a68-8cb6-5db4c0a7d76e",
     content: `Received an awesome surprise on Women's Day from @hashnode
     Got to be a part of 20 noteworthy women writers from Hashnode. 😭
@@ -133,39 +78,6 @@ export const posts = [
     username: "pranita0709",
     createdAt: "2023-03-09T10:53:00+05:30",
     updatedAt: "2023-03-09T10:53:00+05:30",
-    comments: [],
-  },
-  {
-    _id: "a9a1c543-88d0-4d0d-9c68-28dc51e0c2c5",
-    content: `🚀Finally completed my first #React ecommerce app! 💻 It's been a wild ride of learning and coding, but I'm super happy of the outcome. Grateful to @neogcamp 💙
-    Feedback & suggestions are highly appreciated! 💜`,
-    mediaURL:
-      "https://res.cloudinary.com/dwdsvmvkq/video/upload/v1687274491/Social%20Media/HyDednSN9Ev0xiY5_ezewyz.mp4",
-    likes: {
-      likeCount: 801,
-      likedBy: [],
-      dislikedBy: [],
-    },
-    username: "SandhyaR1007",
-    createdAt: "2023-06-05T23:13:00+05:30",
-    updatedAt: "2023-06-05T23:13:00+05:30",
-    comments: [],
-  },
-  {
-    _id: "7841a9b2-9c8d-46d1-9240-08b5d40223ce",
-    content: `Thank you @Spotify to celebrate our 10th anniversary together!💜 #BTSARMY, check out 'My Top 5 BTS Songs' page at http://spotify.com/top5!
-    
-    #BTS #방탄소년단 #BTS10thAnniversary`,
-    mediaURL:
-      "https://res.cloudinary.com/dwdsvmvkq/video/upload/v1687274962/Social%20Media/LH5Bt06ejticAH9n_qsi6ub.mp4",
-    likes: {
-      likeCount: 239800,
-      likedBy: [],
-      dislikedBy: [],
-    },
-    username: "bts_bighit",
-    createdAt: "2023-06-16T18:08:00+05:30",
-    updatedAt: "2023-06-16T18:08:00+05:30",
     comments: [],
   },
   {
@@ -216,27 +128,6 @@ export const posts = [
     comments: [],
   },
   {
-    _id: "90545a39-87c7-4b3c-bd35-ebdcd0788a14",
-    content: `Here's a small outcome of learnings from last 2 weeks.
-    Level, Lighting and Cinematics made in unreal. Characters and Animations are from Mixamo. 
-    Mentor : @VarunMayya
-    
-    Full video link :https://youtu.be/WbqcLrv73fg
-    
-    #unrealengine #animations #sequencer #mixamo #gamedev`,
-    mediaURL:
-      "https://res.cloudinary.com/dwdsvmvkq/video/upload/v1687275816/Social%20Media/sWyXfmp6VU8-_3UX_tcznte.mp4",
-    likes: {
-      likeCount: 9,
-      likedBy: [],
-      dislikedBy: [],
-    },
-    username: "BeingPoem",
-    createdAt: "2020-12-17T21:49:00+05:30",
-    updatedAt: "2020-12-17T21:49:00+05:30",
-    comments: [],
-  },
-  {
     _id: "6c420b4e-9dfe-4d35-80e9-597a0459e918",
     content: `Finally..!! INDIA WON THE ASIA CUP 2016☆☆☆`,
     mediaURL: "",
@@ -262,25 +153,6 @@ export const posts = [
     username: "Niharika_twt",
     createdAt: "2023-04-14T03:32:00+05:30",
     updatedAt: "2023-04-14T03:32:00+05:30",
-    comments: [],
-  },
-  {
-    _id: "32dbf8f8-6890-4c89-9fd9-3de6a0cb05d7",
-    content: `Exciting news! 
-    Finally completed my e-commerce app for plant lovers using React! 
-    It's been an incredible journey, learning web development and combining my passions. 
-    Check it out and share your feedback! 
-    #reactjs #css #ecommerce #plants #webdevelopment #WomenInTech #neogcamp`,
-    mediaURL:
-      "https://res.cloudinary.com/dwdsvmvkq/video/upload/v1687307844/Social%20Media/F86vuXe5jvBQeUwE_dla6ky.mp4",
-    likes: {
-      likeCount: 76,
-      likedBy: [],
-      dislikedBy: [],
-    },
-    username: "pranita0709",
-    createdAt: "2023-06-02T20:13:00+05:30",
-    updatedAt: "2023-06-02T20:13:00+05:30",
     comments: [],
   },
   {

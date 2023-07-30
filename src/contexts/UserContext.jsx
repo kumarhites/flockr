@@ -5,8 +5,11 @@ import { useNavigate } from "react-router-dom";
 import {
   addToBookmarksHandlerService,
   allUsersBookmarksHandlerService,
+  followUserHandlerService,
+  getAllUsersHandlerService,
   getAllUsersService,
   removeFromBookmarksHandlerService,
+  unfollowUserHandlerService,
 } from "../services/userService";
 
 const UserContext = createContext();
@@ -81,6 +84,54 @@ export const UserProvider = ({ children }) => {
     }
   };
 
+  const followUserHandler = async (followUserId) => {
+    try {
+      const response = await followUserHandlerService(followUserId, token);
+      const {
+        status,
+        data: { user, followUser },
+      } = response;
+      if (status === 200) {
+        setUser({ type: "FOLLOW_USER", payload: [user, followUser] });
+        console.log(`Successfully followed ${followUser?.username}!`);
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const unfollowUserHandler = async (followUserId) => {
+    try {
+      const response = await unfollowUserHandlerService(followUserId, token);
+      const {
+        status,
+        data: { user, followUser },
+      } = response;
+      if (status === 200) {
+        setUser({ type: "UNFOLLOW_USER", payload: [user, followUser] });
+        console.log(`Successfully unfollowed ${followUser?.username}!`);
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const getUser = async (username) => {
+    try {
+      const response = await getAllUsersHandlerService(username);
+      const {
+        status,
+        data: { user },
+      } = response;
+      if (status === 200) {
+        setUser({ type: "SET_USER", payload: user });
+      }
+    } catch (err) {
+      navigate("/login");
+      console.log("Login again!");
+    }
+  };
+
   useEffect(() => {
     getAllUsers();
     if (token) {
@@ -97,6 +148,9 @@ export const UserProvider = ({ children }) => {
         isPostBookmarked,
         addToBookmark,
         removeFromBookmarks,
+        followUserHandler,
+        unfollowUserHandler,
+        getUser,
       }}
     >
       {children}
