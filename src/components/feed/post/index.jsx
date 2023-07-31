@@ -12,7 +12,7 @@ import { HiOutlineChatBubbleLeft } from "react-icons/hi2";
 import { RxBookmark, RxBookmarkFilled } from "react-icons/rx";
 import { useUser } from "../../../contexts/UserContext";
 import { usePost } from "../../../contexts/PostContext";
-// import EditPostModal from "../../EditPostModal/EditPostModal";
+import EditPostModal from "../../EditPostModal/EditPostModal";
 
 const Post = ({ post }) => {
     // console.log(post);
@@ -53,7 +53,7 @@ const Post = ({ post }) => {
     } = selectedUser;
 
     const { isPostLiked, likePostHandler, dislikePostHandler } = usePost();
-    // let [isOpen, setIsOpen] = useState(false);
+    let [isOpen, setIsOpen] = useState(false);
     // const { likePost, dislikePost } = usePosts();
     // const { authState } = useAuth();
     // const currentUser = authState?.user;
@@ -93,7 +93,8 @@ const Post = ({ post }) => {
                 <Avatar src={avatar} alt={username} />
                 <div>
                     <Heading
-                        // setIsOpen={setIsOpen}
+                        setIsOpen={setIsOpen}
+                        isOpen={isOpen}
                         postId={_id}
                         name={fullname}
                         username={username}
@@ -157,7 +158,7 @@ const Post = ({ post }) => {
                     </div>
                 </div>
             </div>
-            {/* <EditPostModal isOpen={isOpen} setIsOpen={setIsOpen} post={currentPost} /> */}
+            <EditPostModal isOpen={isOpen} setIsOpen={setIsOpen} post={post} />
         </div>
     );
 };

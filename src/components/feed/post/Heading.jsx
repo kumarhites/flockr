@@ -9,7 +9,7 @@ import FollowBtn from "../../FollowBtn";
 import { usePost } from "../../../contexts/PostContext";
 // import { usePosts } from "../../../contexts/PostContext";
 
-const Heading = ({ postId, name, username, time, setIsOpen }) => {
+const Heading = ({ postId, name, username, time, setIsOpen, isOpen }) => {
     const { currentUser } = useAuth();
     const { deletePostHandler } = usePost();
 
@@ -41,7 +41,9 @@ const Heading = ({ postId, name, username, time, setIsOpen }) => {
             <h2 className="text-neutral-500">{time} ago</h2>
             {currentUser?.username === username ? (
                 <div className="group ml-auto flex cursor-pointer gap-2 rounded-full p-2 transition-colors duration-500 ease-out">
-                    <MdOutlineModeEditOutline className="hover-transition h-9 w-9 cursor-pointer rounded-full p-2 text-xl hover:bg-teal-500/[0.2] hover:text-teal-500" />
+                    <button onClick={() => setIsOpen(!isOpen)}>
+                        <MdOutlineModeEditOutline className="hover-transition h-9 w-9 cursor-pointer rounded-full p-2 text-xl hover:bg-teal-500/[0.2] hover:text-teal-500" />
+                    </button>
                     <button onClick={() => deletePostHandler(postId)}>
                         <AiOutlineDelete className="hover-transition h-9 w-9 cursor-pointer rounded-full p-2 text-xl hover:bg-rose-500/[0.2] hover:text-rose-500" />
                     </button>

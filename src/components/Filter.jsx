@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { usePost } from "../contexts/PostContext";
 
 const Filter = () => {
-    const [filterState, setFilterState] = useState("");
-    const { postDispatch } = usePost();
+    const { postDispatch, postState: {selectedSort} } = usePost();
+    const [filterState, setFilterState] = useState(selectedSort);
 
     const handleFilter = (filterType) => {
         setFilterState(filterType);
@@ -16,7 +16,7 @@ const Filter = () => {
                 <button
                     onClick={() => handleFilter("Trending")}
                     className={`w-full py-2 text-center text-lg  ${
-                        filterState === "Trending" ? "border-r font-bold" : ""
+                        filterState === "Trending" ? "font-bold" : ""
                     }`}
                 >
                     Trending
@@ -26,7 +26,7 @@ const Filter = () => {
                 <button
                     onClick={() => handleFilter("Latest")}
                     className={`w-full py-2 text-center text-lg  ${
-                        filterState === "Latest" ? "border-l font-bold" : ""
+                        filterState === "Latest" ? "font-bold" : ""
                     }`}
                 >
                     Latest Posts
