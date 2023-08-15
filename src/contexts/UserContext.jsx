@@ -12,6 +12,7 @@ import {
     removeFromBookmarksHandlerService,
     unfollowUserHandlerService,
 } from "../services/userService";
+import { toast } from "react-hot-toast";
 
 const UserContext = createContext();
 
