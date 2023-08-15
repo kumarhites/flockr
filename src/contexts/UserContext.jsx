@@ -62,7 +62,7 @@ export const UserProvider = ({ children }) => {
             } = response;
             if (status === 200) {
                 setUser({ type: "ADD_TO_BOOKMARKS", payload: bookmarks });
-                console.log("Successfully added to bookmarks!");
+                toast.success("Post bookmarked!");
             }
         } catch (err) {
             console.log(err);
@@ -81,7 +81,7 @@ export const UserProvider = ({ children }) => {
             } = response;
             if (status === 200) {
                 setUser({ type: "REMOVE_FROM_BOOKMARKS", payload: bookmarks });
-                // !doNotShowToast && console.log("Successfully removed from bookmarks!");
+                toast.success("Bookmark removed!");
             }
         } catch (err) {
             console.error(err);
@@ -100,7 +100,7 @@ export const UserProvider = ({ children }) => {
             } = response;
             if (status === 200) {
                 setUser({ type: "FOLLOW_USER", payload: [user, followUser] });
-                console.log(`Successfully followed ${followUser?.username}!`);
+                toast.success(`You started following ${followUser?.username}!`);
             }
         } catch (err) {
             console.error(err);
@@ -119,7 +119,7 @@ export const UserProvider = ({ children }) => {
             } = response;
             if (status === 200) {
                 setUser({ type: "UNFOLLOW_USER", payload: [user, followUser] });
-                console.log(`Successfully unfollowed ${followUser?.username}!`);
+                toast.success(`Unfollowed ${followUser?.username}!`);
             }
         } catch (err) {
             console.error(err);
@@ -138,7 +138,7 @@ export const UserProvider = ({ children }) => {
             }
         } catch (err) {
             navigate("/login");
-            console.log("Login again!");
+            toast.error("Login again!");
         }
     };
 
@@ -152,14 +152,12 @@ export const UserProvider = ({ children }) => {
             if (status === 201) {
                 setUser({ type: "EDIT_USER_PROFILE", payload: user });
                 setCurrentUser(user);
-                console.log("Successfully updated profile!");
+                toast.success("Successfully updated profile!");
             }
         } catch (err) {
             console.error(err);
         }
     };
-
-   
 
     useEffect(() => {
         getAllUsers();

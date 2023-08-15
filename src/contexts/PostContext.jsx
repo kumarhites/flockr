@@ -10,6 +10,7 @@ import {
 } from "../services/postService";
 import { useAuth } from "./AuthContext";
 import axios from "axios";
+import { toast } from "react-hot-toast";
 
 const PostContext = createContext();
 
@@ -62,7 +63,7 @@ export const PostProvider = ({ children }) => {
             } = response;
             if (status === 201) {
                 postDispatch({ type: "HANDLE_LIKE_POST", payload: posts });
-                console.log("Successfully liked post!");
+                toast.success("Post liked!");
             }
         } catch (err) {
             console.error(err);
@@ -78,7 +79,7 @@ export const PostProvider = ({ children }) => {
             } = response;
             if (status === 201) {
                 postDispatch({ type: "HANDLE_DISLIKE_POST", payload: posts });
-                console.log("Successfully unliked post!");
+                toast.success("Post disliked");
             }
         } catch (err) {
             console.error(err);
@@ -94,7 +95,7 @@ export const PostProvider = ({ children }) => {
             } = response;
             if (status === 201) {
                 postDispatch({ type: "CREATE_POST", payload: posts });
-                console.log("Successfully created post!");
+                toast.success("Post created!");
             }
         } catch (err) {
             console.error(err);
@@ -110,7 +111,7 @@ export const PostProvider = ({ children }) => {
             } = response;
             if (status === 201) {
                 postDispatch({ type: "DELETE_POST", payload: posts });
-                console.log("Successfully deleted post!");
+                toast.success("Post deleted!");
             }
         } catch (err) {
             console.error(err);
@@ -130,7 +131,7 @@ export const PostProvider = ({ children }) => {
             } = response;
             if (status === 201) {
                 postDispatch({ type: "UPDATED_POSTS", payload: posts });
-                console.log("Successfully updated post!");
+                toast.success("Post updated successfully!");
             }
         } catch (err) {
             console.error(err);
@@ -150,6 +151,7 @@ export const PostProvider = ({ children }) => {
                     type: "GET_POSTS",
                     payload: response?.data?.posts,
                 });
+                toast.success("Comment added!");
             }
         } catch (error) {
             console.error(error);
@@ -181,6 +183,7 @@ export const PostProvider = ({ children }) => {
             );
             if (status === 201) {
                 postDispatch({ type: "GET_POSTS", payload: data?.posts });
+                toast.success("Comment updated!");
             }
         } catch (error) {
             console.log(error);
