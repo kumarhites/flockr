@@ -26,6 +26,7 @@ const Post = ({ post }) => {
     const navigate = useNavigate();
     const {
         _id,
+        heading,
         content,
         mediaURL,
         likes: { likeCount, likedBy, dislikedBy },
@@ -100,6 +101,7 @@ const Post = ({ post }) => {
                         username={username}
                         time={formatDistanceToNow(new Date(createdAt))}
                     />
+                    <h1 className="mb-2 text-lg font-bold tracking-tight">{heading}</h1>
                     <p className="">{content}</p>
                     {mediaURL && (
                         <img

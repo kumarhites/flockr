@@ -23,13 +23,13 @@ export const userReducer = (state, { type, payload }) => {
             return { ...state, selectedUser: payload };
         // case "SET_SHOW_EDIT_PROFILE_MODAL":
         //   return { ...state, showEditProfileModal: payload };
-        // case "EDIT_USER_PROFILE":
-        //   return {
-        //     ...state,
-        //     allUsers: state?.allUsers?.map((user) =>
-        //       user._id === payload._id ? payload : user
-        //     ),
-        //   };
+        case "EDIT_USER_PROFILE":
+          return {
+            ...state,
+            allUsers: state?.allUsers?.map((user) =>
+              user._id === payload._id ? payload : user
+            ),
+          };
         // case "SET_SHOW_AVATAR_MODAL":
         //   return { ...state, showAvatarModal: payload };
         // case "SET_SHOW_SEARCH_RESULTS":

@@ -7,7 +7,7 @@ import { MdOutlineModeEditOutline } from "react-icons/md";
 import { useAuth } from "../../contexts/AuthContext";
 import { IoLinkOutline } from "react-icons/io5";
 import UnfollowBtn from "../UnfollowBtn";
-// import EditProfileModal from "../EditProfileModal/EditProfileModal";
+import EditProfileModal from "../EditProfileModal/EditProfileModal";
 
 const Header = ({ selectedUser }) => {
     const { token, currentUser, logoutHandler } = useAuth();
@@ -43,7 +43,7 @@ const Header = ({ selectedUser }) => {
     const isFollowing = updatedCurrentUser?.following?.some(
         (user) => user?.username === username
     );
-    // let [isOpen, setIsOpen] = useState(false);
+    let [isOpen, setIsOpen] = useState(false);
     // const { users } = useUser();
     // const usersArray = users?.users;
     // const { authState } = useAuth();
@@ -103,11 +103,7 @@ const Header = ({ selectedUser }) => {
                         ({following?.length}) Following
                     </p>
                 </div>
-                {/* <EditProfileModal
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-          user={currentUser} 
-        /> */}
+                <EditProfileModal isOpen={isOpen} setIsOpen={setIsOpen} />
             </div>
         </>
     );

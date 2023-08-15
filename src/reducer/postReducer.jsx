@@ -9,8 +9,6 @@ export const postReducer = (state, { type, payload }) => {
             return { ...state, allPosts: payload };
         case "SET_SELECTED_SORT":
             return { ...state, selectedSort: payload };
-        // case "SET_SHOW_ADD_NEW_POST_MODAL":
-        //   return { ...state, showAddNewPostModal: payload };
         case "EDIT_POST":
             return { ...state, toEditPost: payload };
         default:
