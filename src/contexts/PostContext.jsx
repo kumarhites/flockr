@@ -63,7 +63,13 @@ export const PostProvider = ({ children }) => {
             } = response;
             if (status === 201) {
                 postDispatch({ type: "HANDLE_LIKE_POST", payload: posts });
-                toast.success("Post liked!");
+                toast.success("Post liked!", {
+                    style: {
+                        borderRadius: "10px",
+                        background: "#333",
+                        color: "#fff",
+                    },
+                });
             }
         } catch (err) {
             console.error(err);
@@ -79,7 +85,13 @@ export const PostProvider = ({ children }) => {
             } = response;
             if (status === 201) {
                 postDispatch({ type: "HANDLE_DISLIKE_POST", payload: posts });
-                toast.success("Post disliked");
+                toast.success("Post disliked", {
+                    style: {
+                        borderRadius: "10px",
+                        background: "#333",
+                        color: "#fff",
+                    },
+                });
             }
         } catch (err) {
             console.error(err);
@@ -95,7 +107,13 @@ export const PostProvider = ({ children }) => {
             } = response;
             if (status === 201) {
                 postDispatch({ type: "CREATE_POST", payload: posts });
-                toast.success("Post created!");
+                toast.success("Post created!", {
+                    style: {
+                        borderRadius: "10px",
+                        background: "#333",
+                        color: "#fff",
+                    },
+                });
             }
         } catch (err) {
             console.error(err);
@@ -111,7 +129,13 @@ export const PostProvider = ({ children }) => {
             } = response;
             if (status === 201) {
                 postDispatch({ type: "DELETE_POST", payload: posts });
-                toast.success("Post deleted!");
+                toast.success("Post deleted!", {
+                    style: {
+                        borderRadius: "10px",
+                        background: "#333",
+                        color: "#fff",
+                    },
+                });
             }
         } catch (err) {
             console.error(err);
@@ -131,7 +155,13 @@ export const PostProvider = ({ children }) => {
             } = response;
             if (status === 201) {
                 postDispatch({ type: "UPDATED_POSTS", payload: posts });
-                toast.success("Post updated successfully!");
+                toast.success("Post updated successfully!", {
+                    style: {
+                        borderRadius: "10px",
+                        background: "#333",
+                        color: "#fff",
+                    },
+                });
             }
         } catch (err) {
             console.error(err);
@@ -151,7 +181,13 @@ export const PostProvider = ({ children }) => {
                     type: "GET_POSTS",
                     payload: response?.data?.posts,
                 });
-                toast.success("Comment added!");
+                toast.success("Comment added!", {
+                    style: {
+                        borderRadius: "10px",
+                        background: "#333",
+                        color: "#fff",
+                    },
+                });
             }
         } catch (error) {
             console.error(error);
@@ -167,7 +203,13 @@ export const PostProvider = ({ children }) => {
             });
             if (status === 201 || status === 200) {
                 postDispatch({ type: "GET_POSTS", payload: data?.posts });
-                toast.success("Comment removed!");
+                toast.success("Comment removed!", {
+                    style: {
+                        borderRadius: "10px",
+                        background: "#333",
+                        color: "#fff",
+                    },
+                });
             }
         } catch (e) {
             console.error(e);
@@ -183,7 +225,13 @@ export const PostProvider = ({ children }) => {
             );
             if (status === 201) {
                 postDispatch({ type: "GET_POSTS", payload: data?.posts });
-                toast.success("Comment updated!");
+                toast.success("Comment updated!", {
+                    style: {
+                        borderRadius: "10px",
+                        background: "#333",
+                        color: "#fff",
+                    },
+                });
             }
         } catch (error) {
             console.log(error);

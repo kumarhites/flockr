@@ -63,7 +63,13 @@ export const UserProvider = ({ children }) => {
             } = response;
             if (status === 200) {
                 setUser({ type: "ADD_TO_BOOKMARKS", payload: bookmarks });
-                toast.success("Post bookmarked!");
+                toast.success("Post bookmarked!", {
+                    style: {
+                        borderRadius: "10px",
+                        background: "#333",
+                        color: "#fff",
+                    },
+                });
             }
         } catch (err) {
             console.log(err);
@@ -82,7 +88,13 @@ export const UserProvider = ({ children }) => {
             } = response;
             if (status === 200) {
                 setUser({ type: "REMOVE_FROM_BOOKMARKS", payload: bookmarks });
-                toast.success("Bookmark removed!");
+                toast.success("Bookmark removed!", {
+                    style: {
+                        borderRadius: "10px",
+                        background: "#333",
+                        color: "#fff",
+                    },
+                });
             }
         } catch (err) {
             console.error(err);
@@ -101,7 +113,16 @@ export const UserProvider = ({ children }) => {
             } = response;
             if (status === 200) {
                 setUser({ type: "FOLLOW_USER", payload: [user, followUser] });
-                toast.success(`You started following ${followUser?.username}!`);
+                toast.success(
+                    `You started following ${followUser?.username}!`,
+                    {
+                        style: {
+                            borderRadius: "10px",
+                            background: "#333",
+                            color: "#fff",
+                        },
+                    }
+                );
             }
         } catch (err) {
             console.error(err);
@@ -120,7 +141,13 @@ export const UserProvider = ({ children }) => {
             } = response;
             if (status === 200) {
                 setUser({ type: "UNFOLLOW_USER", payload: [user, followUser] });
-                toast.success(`Unfollowed ${followUser?.username}!`);
+                toast.success(`Unfollowed ${followUser?.username}!`, {
+                    style: {
+                        borderRadius: "10px",
+                        background: "#333",
+                        color: "#fff",
+                    },
+                });
             }
         } catch (err) {
             console.error(err);
@@ -139,7 +166,13 @@ export const UserProvider = ({ children }) => {
             }
         } catch (err) {
             navigate("/login");
-            toast.error("Login again!");
+            toast.error("Login again!", {
+                style: {
+                    borderRadius: "10px",
+                    background: "#333",
+                    color: "#fff",
+                },
+            });
         }
     };
 
@@ -153,7 +186,13 @@ export const UserProvider = ({ children }) => {
             if (status === 201) {
                 setUser({ type: "EDIT_USER_PROFILE", payload: user });
                 setCurrentUser(user);
-                toast.success("Successfully updated profile!");
+                toast.success("Successfully updated profile!", {
+                    style: {
+                        borderRadius: "10px",
+                        background: "#333",
+                        color: "#fff",
+                    },
+                });
             }
         } catch (err) {
             console.error(err);

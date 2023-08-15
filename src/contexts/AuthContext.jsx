@@ -26,12 +26,24 @@ export const AuthProvider = ({ children }) => {
                 );
                 setCurrentUser(foundUser);
                 setToken(encodedToken);
-                toast.success(`Successfully signed in as ${username}!`);
+                toast.success(`Successfully signed in as ${username}!`, {
+                    style: {
+                        borderRadius: "10px",
+                        background: "#333",
+                        color: "#fff",
+                    },
+                });
                 navigate("/");
             }
         } catch (err) {
             console.error(err);
-            toast.error("Unable to sign in!");
+            toast.error("Unable to sign in!", {
+                style: {
+                    borderRadius: "10px",
+                    background: "#333",
+                    color: "#fff",
+                },
+            });
         }
     };
 
@@ -45,7 +57,13 @@ export const AuthProvider = ({ children }) => {
             avatar,
         } = userSignupDetails;
         if (password !== confirmPassword) {
-            console.error("Password fields are not matching!");
+            toast.error("Password fields are not matching!", {
+                style: {
+                    borderRadius: "10px",
+                    background: "#333",
+                    color: "#fff",
+                },
+            });
             navigate("/signup");
         } else {
             try {
@@ -72,12 +90,24 @@ export const AuthProvider = ({ children }) => {
                     );
                     setCurrentUser(createdUser);
                     setToken(encodedToken);
-                    toast.success(`Successfully signed up as ${username}!`);
+                    toast.success(`Successfully signed up as ${username}!`, {
+                        style: {
+                            borderRadius: "10px",
+                            background: "#333",
+                            color: "#fff",
+                        },
+                    });
                     navigate("/");
                 }
             } catch (err) {
                 console.error(err);
-                toast.error("Unable to sign up!");
+                toast.error("Unable to sign up!", {
+                    style: {
+                        borderRadius: "10px",
+                        background: "#333",
+                        color: "#fff",
+                    },
+                });
             }
         }
     };
@@ -86,7 +116,13 @@ export const AuthProvider = ({ children }) => {
         setToken(null);
         setCurrentUser(null);
         localStorage.removeItem("currentUser");
-        toast.success("Successfully logged out!");
+        toast.success("Successfully logged out!", {
+            style: {
+                borderRadius: "10px",
+                background: "#333",
+                color: "#fff",
+            },
+        });
         navigate(location?.state?.from?.pathname ?? "/");
     };
 

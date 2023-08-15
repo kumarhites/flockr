@@ -14,7 +14,7 @@ function App() {
     return (
         <>
             <Toaster
-                position="top-center"
+                position="top-right"
                 reverseOrder={false}
                 containerStyle={{ top: "10%" }}
                 toastOptions={{ style: { maxWidth: 500 } }}
