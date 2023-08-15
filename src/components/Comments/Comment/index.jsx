@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import { useUser } from "../../../contexts/UserContext";
 import Heading from "./Heading";
 import Avatar from "../../Avatar";
-import { useAuth } from "../../../contexts/AuthContext";
-import { NavLink } from "react-router-dom";
 import EditCommentModal from "../../EditCommentsModal/EditCommentModal";
-
-// import { NavLink } from "react-router-dom";
 
 const Comment = ({ comment, postId }) => {
     let [isOpen, setIsOpen] = useState(false);
@@ -14,7 +10,6 @@ const Comment = ({ comment, postId }) => {
         user: { allUsers },
     } = useUser();
 
-    const { currentUser } = useAuth();
     const user = allUsers?.find(
         (dbUser) => comment?.username === dbUser?.username
     );
@@ -35,8 +30,6 @@ const Comment = ({ comment, postId }) => {
                         />
                     </div>
                     <p>{comment?.text}</p>
-
-                    
                 </div>
             </div>
             <EditCommentModal

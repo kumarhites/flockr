@@ -5,19 +5,9 @@ import FollowBtn from "../../FollowBtn";
 
 const User = ({ user }) => {
   const {
-    _id,
     firstName,
-    lastName,
     username,
-    password,
-    bio,
-    website,
     avatar,
-    backgroundImage,
-    createdAt,
-    updatedAt,
-    following,
-    followers,
   } = user;
   return (
     <>

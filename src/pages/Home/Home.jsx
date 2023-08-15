@@ -8,12 +8,10 @@ import Suggestions from "../../components/Suggestions/Suggestions";
 import Publisher from "../../components/publisher";
 import Filter from "../../components/Filter";
 
-
 const Home = () => {
     const { currentUser } = useAuth();
     const {
-        postState: { allPosts, selectedSort },
-        setPost,
+        postState: { allPosts },
         sortedPosts,
     } = usePost();
 

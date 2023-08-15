@@ -1,14 +1,13 @@
-import Textbox from "./Textbox";
 import React, { useEffect, useState } from "react";
 import Avatar from "../Avatar";
 import { useAuth } from "../../contexts/AuthContext";
 import { usePost } from "../../contexts/PostContext";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const Publisher = () => {
     const [postContent, setPostContent] = useState("");
     const {
-        currentUser: { username, avatar },
+        currentUser: { avatar },
     } = useAuth();
     const {
         postState: { toEditPost },
@@ -16,7 +15,7 @@ const Publisher = () => {
         postDispatch,
         editPostHandler,
     } = usePost();
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     const formSubmitHandler = (e) => {
         e.preventDefault();
@@ -33,7 +32,7 @@ const Publisher = () => {
         if (toEditPost) {
             setPostContent(toEditPost.content);
         }
-    }, []);
+    }, [toEditPost]);
 
     return (
         <section className="grid grid-cols-[auto,1fr] gap-4 px-4 py-4 ">
@@ -52,7 +51,8 @@ const Publisher = () => {
                 </div>
                 <div className="flex items-center justify-end gap-4">
                     <div className="group flex gap-3">
-                        {postContent?.length === 0 || postContent === undefined ? (
+                        {postContent?.length === 0 ||
+                        postContent === undefined ? (
                             <button className="disabled cursor-not-allowed rounded-full bg-gray-500 px-5 font-semibold text-white">
                                 Post
                             </button>

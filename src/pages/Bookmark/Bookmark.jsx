@@ -1,5 +1,4 @@
 import React from "react";
-import Feed from "../../components/feed";
 import Layout from "../../components/layout";
 import Suggestions from "../../components/Suggestions/Suggestions";
 import NoBookmarks from "../../components/NoBookmarks";

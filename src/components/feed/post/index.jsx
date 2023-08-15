@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Heading from "./Heading";
 import Avatar from "../../Avatar";
 import { formatDistanceToNow } from "date-fns";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { HiOutlineChatBubbleLeft } from "react-icons/hi2";
 import { RxBookmark, RxBookmarkFilled } from "react-icons/rx";
@@ -18,13 +18,12 @@ const Post = ({ post }) => {
         addToBookmark,
         removeFromBookmarks,
     } = useUser();
-    const navigate = useNavigate();
+
     const {
         _id,
         heading,
         content,
         mediaURL,
-        likes: { likeCount, likedBy, dislikedBy },
         username,
         createdAt,
         comments,

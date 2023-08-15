@@ -9,9 +9,9 @@ export default function Modal({ isOpen, setIsOpen }) {
     const { currentUser } = useAuth();
     const {
         user: { allUsers },
-        setUser,
         editUserProfile,
     } = useUser();
+    
     const [userValue, setUserValue] = useState({});
     const [profileURL, setProfileURL] = useState("");
 

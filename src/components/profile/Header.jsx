@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Avatar from "../Avatar";
-import { useParams } from "react-router-dom";
 import { useUser } from "../../contexts/UserContext";
 import FollowBtn from "../FollowBtn";
 import { MdOutlineModeEditOutline } from "react-icons/md";
@@ -10,28 +9,22 @@ import UnfollowBtn from "../UnfollowBtn";
 import EditProfileModal from "../EditProfileModal/EditProfileModal";
 
 const Header = ({ selectedUser }) => {
-    const { token, currentUser, logoutHandler } = useAuth();
+    const { currentUser } = useAuth();
     const {
         user: { allUsers },
-        setUser,
-        followUserHandler,
-        unfollowUserHandler,
     } = useUser();
 
     const {
-        _id,
         firstName,
         lastName,
         username,
-        password,
+
         bio,
         website,
         avatar,
-        createdAt,
-        updatedAt,
+
         following,
         followers,
-        bookmarks,
     } = selectedUser;
 
     console.log(followers, following);
@@ -44,7 +37,6 @@ const Header = ({ selectedUser }) => {
         (user) => user?.username === username
     );
     let [isOpen, setIsOpen] = useState(false);
-
 
     return (
         <>
