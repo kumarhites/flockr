@@ -11,6 +11,8 @@ export const postReducer = (state, { type, payload }) => {
             return { ...state, selectedSort: payload };
         case "EDIT_POST":
             return { ...state, toEditPost: payload };
+        case "GET_POSTS":
+            return { ...state, allPosts: payload };
         default:
             return state;
     }

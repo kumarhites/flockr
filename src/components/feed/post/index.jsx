@@ -128,7 +128,7 @@ const Post = ({ post }) => {
                             </div>
                         </button>
                         <div className="group flex items-center tablet:pr-4">
-                            <NavLink to="#">
+                            <NavLink to={`/post/${_id}`}>
                                 <div className="group ml-auto flex cursor-pointer gap-2 rounded-full p-2 transition-colors duration-500 ease-out">
                                     <HiOutlineChatBubbleLeft className="hover-transition h-9 w-9 cursor-pointer rounded-full p-2 text-xl hover:bg-sky-500/[0.3] hover:text-sky-500" />
                                 </div>

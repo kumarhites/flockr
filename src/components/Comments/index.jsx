@@ -3,15 +3,16 @@ import React, { useState } from "react";
 // import { useComment } from "../../contexts/CommentContext";
 import { useParams } from "react-router-dom";
 import Comment from "./Comment";
+import { usePost } from "../../contexts/PostContext";
 
 const Comments = ({ comments }) => {
     const [commentInput, setCommentInput] = useState("");
-    // const { addComment } = useComment();
+    const { addComment } = usePost();
     const { postId } = useParams();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // addComment(postId, commentInput);
+        addComment(postId, commentInput);
         setCommentInput("");
     };
 

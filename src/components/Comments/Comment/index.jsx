@@ -3,16 +3,17 @@ import { useUser } from "../../../contexts/UserContext";
 import Heading from "./Heading";
 import Avatar from "../../Avatar";
 import { useAuth } from "../../../contexts/AuthContext";
-// import EditCommentModal from "../../EditCommentsModal/EditCommentModal";
+import { NavLink } from "react-router-dom";
+import EditCommentModal from "../../EditCommentsModal/EditCommentModal";
 
 // import { NavLink } from "react-router-dom";
 
 const Comment = ({ comment, postId }) => {
-    // let [isOpen, setIsOpen] = useState(false);
+    let [isOpen, setIsOpen] = useState(false);
     const {
         user: { allUsers },
     } = useUser();
-    console.log(allUsers)
+    console.log(allUsers);
     const { currentUser } = useAuth();
     const user = allUsers?.find(
         (dbUser) => comment?.username === dbUser?.username
@@ -21,21 +22,21 @@ const Comment = ({ comment, postId }) => {
     console.log("postId", postId);
 
     console.log("comment.jsx", user);
-
+    const name = user?.firstName + " " + user?.lastName;
     return (
         <div className="border-t-[1px] px-4 pb-2 pt-3 transition-colors duration-500 ease-out">
             <div className="grid grid-cols-[auto,1fr] gap-3">
-                <Avatar src={user?.image} alt={user?.username} />
+                <Avatar src={user?.avatar} alt={user?.username} />
                 <div>
-                    {/* <NavLink to={`/profile/${user?.username}`}> */}
-                    <Heading
-                        // setIsOpen={setIsOpen}
-                        name={user?.fullname}
-                        username={user?.username}
-                        postId={postId}
-                        commentId={comment?._id}
-                    />
-                    {/* </NavLink> */}
+                    <div>
+                        <Heading
+                            setIsOpen={setIsOpen}
+                            name={name}
+                            username={user?.username}
+                            postId={postId}
+                            commentId={comment?._id}
+                        />
+                    </div>
                     <p>{comment?.text}</p>
 
                     {/* <div className="flex justify-between mt-3 max-w-md cursor-pointer">
@@ -90,12 +91,12 @@ const Comment = ({ comment, postId }) => {
           </div> */}
                 </div>
             </div>
-            {/* <EditCommentModal
+            <EditCommentModal
                 isOpen={isOpen}
                 setIsOpen={setIsOpen}
                 comment={comment}
                 postId={postId}
-            /> */}
+            />
         </div>
     );
 };
