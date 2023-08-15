@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import Heading from "./Heading";
 import Avatar from "../../Avatar";
 import { formatDistanceToNow } from "date-fns";
-// import { useUser } from "../../../contexts/UserContext";
-// import { usePosts } from "../../../contexts/PostContext";
 import { NavLink, useNavigate } from "react-router-dom";
-// import { useAuth } from "../../../contexts/AuthContext";
-// import { useBookmark } from "../../../contexts/BookmarkContext";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { HiOutlineChatBubbleLeft } from "react-icons/hi2";
 import { RxBookmark, RxBookmarkFilled } from "react-icons/rx";
@@ -15,14 +11,13 @@ import { usePost } from "../../../contexts/PostContext";
 import EditPostModal from "../../EditPostModal/EditPostModal";
 
 const Post = ({ post }) => {
-    // console.log(post);
+
     const {
         user: { allUsers },
         isPostBookmarked,
         addToBookmark,
         removeFromBookmarks,
     } = useUser();
-    // const [showMorePost, setShowMorePost] = useState(false);
     const navigate = useNavigate();
     const {
         _id,
@@ -32,60 +27,19 @@ const Post = ({ post }) => {
         likes: { likeCount, likedBy, dislikedBy },
         username,
         createdAt,
-        updatedAt,
         comments,
     } = post;
 
     const selectedUser = allUsers?.find((user) => user?.username === username);
 
-    const {
-        // _id,
-        firstName,
-        lastName,
-        // username,
-        password,
-        bio,
-        website,
-        avatar,
-        // createdAt,
-        // updatedAt,
-        following,
-        followers,
-    } = selectedUser;
+    const { firstName, lastName, avatar } = selectedUser;
 
     const { isPostLiked, likePostHandler, dislikePostHandler } = usePost();
     let [isOpen, setIsOpen] = useState(false);
-    // const { likePost, dislikePost } = usePosts();
-    // const { authState } = useAuth();
-    // const currentUser = authState?.user;
-
-    // const { bookmarksState, addToBookmark, removeFromBookmarks } = useBookmark();
-
-    // const { comments } = post;
-    // const commentLength = comments?.length;
-
-    // const { users } = useUser();
-    // const { postsState } = usePosts();
-
-    // const currentPost = postsState?.posts?.find(
-    //   (dbPost) => dbPost._id === post._id
-    // );
-
-    // const userImage = users?.users?.find(
-    //   (dbUser) => currentPost?.username === dbUser?.username
-    // );
 
     const handleLikes = (post) => {
         isPostLiked(post) ? dislikePostHandler(_id) : likePostHandler(_id);
     };
-
-    // const bookmarkedByUser = () => {
-    //   return (
-    //     bookmarksState?.bookmarks?.filter((bookmark) => bookmark === post?._id)
-    //       ?.length !== 0
-    //   );
-    // };
-
     const fullname = firstName + " " + lastName;
 
     return (
@@ -101,7 +55,9 @@ const Post = ({ post }) => {
                         username={username}
                         time={formatDistanceToNow(new Date(createdAt))}
                     />
-                    <h1 className="mb-2 text-lg font-bold tracking-tight">{heading}</h1>
+                    <h1 className="mb-2 text-lg font-bold tracking-tight">
+                        {heading}
+                    </h1>
                     <p className="">{content}</p>
                     {mediaURL && (
                         <img
@@ -153,9 +109,6 @@ const Post = ({ post }) => {
                                     </div>
                                 </button>
                             )}
-                            {/* 
-              ) : (
-                 */}
                         </div>
                     </div>
                 </div>

@@ -75,15 +75,8 @@ export const AuthProvider = ({ children }) => {
                     navigate("/");
                 }
             } catch (err) {
-                // const { response } = err;
-                // if (response.status === 422) {
-                //   console.error(
-                //     "Username already exists! Please try signing up with another username!"
-                //   );
-                // } else {
                 console.error(err);
                 console.error("Unable to sign up!");
-                // }
             }
         }
     };

@@ -2,7 +2,6 @@ import React from "react";
 import Avatar from "../../Avatar";
 import { NavLink } from "react-router-dom";
 import FollowBtn from "../../FollowBtn";
-// import FollowBtn from "../../FollowBtn";
 
 const User = ({ user }) => {
   const {

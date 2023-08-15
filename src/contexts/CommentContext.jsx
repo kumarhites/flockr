@@ -1,7 +1,6 @@
 import React, { createContext, useContext } from "react";
 import { usePost } from "./PostContext";
 import axios from "axios";
-// import { toast } from "react-hot-toast";
 import { useAuth } from "./AuthContext";
 
 const CommentContext = createContext();

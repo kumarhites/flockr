@@ -4,7 +4,6 @@ import { AiOutlineDelete } from "react-icons/ai";
 import { useAuth } from "../../../contexts/AuthContext";
 import { usePost } from "../../../contexts/PostContext";
 import { NavLink } from "react-router-dom";
-// import { useComment } from "../../../contexts/CommentContext";
 
 const Heading = ({ name, username, postId, commentId, setIsOpen }) => {
     const { currentUser } = useAuth();

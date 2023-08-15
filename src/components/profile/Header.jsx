@@ -44,12 +44,7 @@ const Header = ({ selectedUser }) => {
         (user) => user?.username === username
     );
     let [isOpen, setIsOpen] = useState(false);
-    // const { users } = useUser();
-    // const usersArray = users?.users;
-    // const { authState } = useAuth();
-    // const currentUser = authState?.user;
-    // const { username } = useParams();
-    // const currentUser = usersArray?.find((user) => user.username === username);
+
 
     return (
         <>

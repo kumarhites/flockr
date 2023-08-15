@@ -1,11 +1,9 @@
-export const defaultAvatar =
-  "https://res.cloudinary.com/dwdsvmvkq/image/upload/v1688865592/girl_190613_pvk0yz.png";
-
 export const avatarImages = [
-  "https://res.cloudinary.com/dwdsvmvkq/image/upload/v1688934267/businessman-character-avatar-isolated_24877-60111_a77kdt.avif",
-  "https://res.cloudinary.com/dwdsvmvkq/image/upload/v1688934432/706830_nqiux1.png",
-  "https://res.cloudinary.com/dwdsvmvkq/image/upload/v1688934480/4333642_bwwk1t.png",
-  "https://res.cloudinary.com/dwdsvmvkq/image/upload/v1688865592/girl_190613_pvk0yz.png",
-  "https://res.cloudinary.com/dwdsvmvkq/image/upload/v1688934524/1458201_eilfol.png",
-  "https://res.cloudinary.com/dwdsvmvkq/image/upload/v1688934561/6997628_acxpub.png",
+    "https://res.cloudinary.com/dzyndbf5l/image/upload/v1692089572/avatar_h4fwwz.png",
+    "https://res.cloudinary.com/dzyndbf5l/image/upload/v1692089624/jigglypuff_v33mje.png",
+    "https://res.cloudinary.com/dzyndbf5l/image/upload/v1692089702/panda_bi77qh.png",
+    "https://res.cloudinary.com/dzyndbf5l/image/upload/v1692089840/woman_jnselo.png",
+    "https://res.cloudinary.com/dzyndbf5l/image/upload/v1692089841/boy_eim5da.png",
+    "https://res.cloudinary.com/dzyndbf5l/image/upload/v1692089841/pikachu_mfnygj.png",
+    "https://res.cloudinary.com/dzyndbf5l/image/upload/v1692089842/mushroom_ic5bgf.png",
 ];

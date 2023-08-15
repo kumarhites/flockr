@@ -11,7 +11,7 @@ export const posts = [
         content: `What's the best thing about JavaScript? It's not Java.`,
         mediaURL: "",
         likes: {
-            likeCount: 8955,
+            likeCount: 89,
             likedBy: [],
             dislikedBy: [],
         },
@@ -55,7 +55,19 @@ But remember, Joker, this isn't a game. Lives are at stake, and your recklessnes
         username: "darkKnight",
         createdAt: "2023-03-09T10:53:00+05:30",
         updatedAt: "2023-03-09T10:53:00+05:30",
-        comments: [],
+        comments: [
+            {
+                _id: "d952061f-eh563-463d-b101-e90ff9ec37f4",
+                text: "Let me know if you need any help.",
+                username: "superman",
+                votes: {
+                    upvotedBy: [],
+                    downvotedBy: [],
+                },
+                createdAt: "2023-08-15T14:03:16+05:30",
+                updatedAt: "2023-08-15T14:03:16+05:30",
+            },
+        ],
     },
     {
         _id: "77a5c0a7-9083-46f2-8b59-f78870811d45",
@@ -70,7 +82,19 @@ But remember, Joker, this isn't a game. Lives are at stake, and your recklessnes
         username: "hiteshkumar",
         createdAt: "2021-11-12T15:08:00+05:30",
         updatedAt: "2021-11-12T15:08:00+05:30",
-        comments: [],
+        comments: [
+            {
+                _id: "d952061f-e4a3-463d-b101-e90ff9ec37f4",
+                text: "yo! looks delicious",
+                username: "darkKnight",
+                votes: {
+                    upvotedBy: [],
+                    downvotedBy: [],
+                },
+                createdAt: "2023-08-15T14:03:16+05:30",
+                updatedAt: "2023-08-15T14:03:16+05:30",
+            },
+        ],
     },
     {
         _id: "d2d3fb09-781e-44ed-a55a-33f2391d0e47",
@@ -85,14 +109,26 @@ But remember, Joker, this isn't a game. Lives are at stake, and your recklessnes
         username: "darkKnight",
         createdAt: "2023-06-11T21:37:00+05:30",
         updatedAt: "2023-06-11T21:37:00+05:30",
-        comments: [],
+        comments: [
+            {
+                _id: "57e55b55-92c0-45e3-8adc-f5a5a80be4c6",
+                text: "hahaha why so serious 🃏",
+                username: "joker",
+                votes: {
+                    upvotedBy: [],
+                    downvotedBy: [],
+                },
+                createdAt: "2023-08-15T14:03:16+05:30",
+                updatedAt: "2023-08-15T14:03:16+05:30",
+            },
+        ],
     },
     {
         _id: "a36638f4-b48b-4bbd-aaf2-93828e827c46",
-        heading: `🃏 The Joker's Sinister Post: Chaos Unleashed 🃏`,
-        content: `Hello, my dear Gotham. Miss me? It's time to play a little game. You see, I've scattered a series of surprises throughout your beloved city. Explosive delights that will paint the town red with chaos. Oh, the fireworks will be spectacular`,
+        heading: `Tried this new delicacy, its delicious!🃏`,
+        content: `I dare to savor life's flavors, one bite at a time. From chaos to cuisine, I master the art of indulgence – a culinary journey fit for a jester's palate! 🤡`,
         mediaURL:
-            "https://i.pinimg.com/564x/f4/1b/e4/f41be4ecb643047b1943907852a96bb4.jpg",
+            "https://i.pinimg.com/564x/f9/67/4f/f9674f2a1b07fa958a4a88a7e80f6faf.jpg",
         likes: {
             likeCount: 31,
             likedBy: [],
@@ -101,67 +137,104 @@ But remember, Joker, this isn't a game. Lives are at stake, and your recklessnes
         username: "joker",
         createdAt: "2023-01-28T19:02:00+05:30",
         updatedAt: "2023-01-28T19:02:00+05:30",
-        comments: [],
+        comments: [
+            {
+                _id: "57e55b55-92c0-45e3-8afg-f5a5a80be4c6",
+                text: "Looks great Joker!",
+                username: "darkKnight",
+                votes: {
+                    upvotedBy: [],
+                    downvotedBy: [],
+                },
+                createdAt: "2023-08-15T14:03:16+05:30",
+                updatedAt: "2023-08-15T14:03:16+05:30",
+            },
+        ],
     },
-    // {
-    //     _id: "6c420b4e-9dfe-4d35-80e9-597a0459e918",
-    //     content: `Finally..!! INDIA WON THE ASIA CUP 2016☆☆☆`,
-    //     mediaURL: "",
-    //     likes: {
-    //         likeCount: 11,
-    //         likedBy: [],
-    //         dislikedBy: [],
-    //     },
-    //     username: "ManishaG15",
-    //     createdAt: "2016-03-06T23:46:00+05:30",
-    //     updatedAt: "2016-03-06T23:46:00+05:30",
-    //     comments: [],
-    // },
-    // {
-    //     _id: "fbd4a746-41c7-4c26-9980-1fb4ef5e69af",
-    //     content: `I'm now a 4 kyū blue belt on @codewars! Come join me #codewarriors!.`,
-    //     mediaURL: "",
-    //     likes: {
-    //         likeCount: 23,
-    //         likedBy: [],
-    //         dislikedBy: [],
-    //     },
-    //     username: "Niharika_twt",
-    //     createdAt: "2023-04-14T03:32:00+05:30",
-    //     updatedAt: "2023-04-14T03:32:00+05:30",
-    //     comments: [],
-    // },
-    // {
-    //     _id: "84c9e418-2ed3-471e-8b7a-c73e9f3d8b78",
-    //     content: `Had an amazing session on Call Stack with @hiteshkumar sir. I've never had a chance to learn from someone who makes you understand things so effortlessly. I'm grateful to be a part of @neogcamp 2023. I feel like haule haule I'll also get there. 💫🙏🏻💜
-    // #haulehaule #iykyk`,
-    //     mediaURL:
-    //         "https://res.cloudinary.com/dwdsvmvkq/image/upload/v1687307973/Social%20Media/FqZmyW_WcAAEjnC_xb9nbj.jpg",
-    //     likes: {
-    //         likeCount: 66,
-    //         likedBy: [],
-    //         dislikedBy: [],
-    //     },
-    //     username: "SandhyaR1007",
-    //     createdAt: "2023-03-05T01:15:00+05:30",
-    //     updatedAt: "2023-03-05T01:15:00+05:30",
-    //     comments: [],
-    // },
-    // {
-    //     _id: "9c12aee1-6b7e-4ad6-99f2-2028f192692f",
-    //     content: `#StopAsianHate #StopAAPIHate`,
-    //     mediaURL:
-    //         "https://res.cloudinary.com/dwdsvmvkq/image/upload/v1687308608/Social%20Media/ExsRBTSVIAIm2jr_nhsjcz.jpg",
-    //     likes: {
-    //         likeCount: 2400000,
-    //         likedBy: [],
-    //         dislikedBy: [],
-    //     },
-    //     username: "bts_bighit",
-    //     createdAt: "2021-03-30T07:18:00+05:30",
-    //     updatedAt: "2021-03-30T07:18:00+05:30",
-    //     comments: [],
-    // },
+    {
+        _id: "a36638f4-b48b-4bbd-asdaf2-93828e827c46",
+        heading: `Riddle me this, Batman 🦇`,
+        content: `🎩 Riddle me this, if you dare:
+        I'm a word of letters three,
+        Take one away and I am less,
+        Add one more and I become me.
+        What am I? 🧐🔍`,
+        mediaURL:
+            "https://i.pinimg.com/564x/8f/d3/7a/8fd37a87c124ba8d611170809a87b3c6.jpg",
+        likes: {
+            likeCount: 31,
+            likedBy: [],
+            dislikedBy: [],
+        },
+        username: "riddler",
+        createdAt: "2023-01-28T19:02:00+05:30",
+        updatedAt: "2023-01-28T19:02:00+05:30",
+        comments: [
+            {
+                _id: "57e55b55-92c0-45e3-8afg-f5a5adds80be4c6",
+                text: "haha !!",
+                username: "joker",
+                votes: {
+                    upvotedBy: [],
+                    downvotedBy: [],
+                },
+                createdAt: "2023-08-15T14:03:16+05:30",
+                updatedAt: "2023-08-15T14:03:16+05:30",
+            },
+            {
+                _id: "57e55b55-92c0-45e3-8afg-f5a5a80beds4c6",
+                text: `Ah, Riddler, your puzzles persist, 'Age' it is,
+                I will find the answers in the shades you've laid.`,
+                username: "darkKnight",
+                votes: {
+                    upvotedBy: [],
+                    downvotedBy: [],
+                },
+                createdAt: "2023-08-15T14:03:16+05:30",
+                updatedAt: "2023-08-15T14:03:16+05:30",
+            },
+        ],
+    },
+    {
+        _id: "a36638f4-b48b-4bbd-akhjgdaf2-93828e827c46",
+        heading: `Check this out, my recent trip to outer space! 🌏`,
+        content: `Captured from celestial heights, witness Earth's beauty from my cosmic lens. A planet worth safeguarding, a home embraced by the stars. 🌍🌌`,
+        mediaURL:
+            "https://i.pinimg.com/564x/a1/96/d5/a196d5b1ad03871536874dd01d116957.jpg",
+        likes: {
+            likeCount: 200,
+            likedBy: [],
+            dislikedBy: [],
+        },
+        username: "superman",
+        createdAt: "2023-01-28T19:02:00+05:30",
+        updatedAt: "2023-01-28T19:02:00+05:30",
+        comments: [
+            {
+                _id: "57e55b55-92c0-45e3-8afg-f5a5adds80be4c6",
+                text: "haha !! still wont be able to save it!",
+                username: "joker",
+                votes: {
+                    upvotedBy: [],
+                    downvotedBy: [],
+                },
+                createdAt: "2023-08-15T14:03:16+05:30",
+                updatedAt: "2023-08-15T14:03:16+05:30",
+            },
+            {
+                _id: "57e55b55-92c0-45e3-8afg-f5a5a80beds4c6",
+                text: `We will stop you! Joker`,
+                username: "darkKnight",
+                votes: {
+                    upvotedBy: [],
+                    downvotedBy: [],
+                },
+                createdAt: "2023-08-15T14:03:16+05:30",
+                updatedAt: "2023-08-15T14:03:16+05:30",
+            },
+        ],
+    },
+
     {
         _id: "b67d07e7-4e72-46a0-946a-7b3bcbf39e59",
         content: `Kicks is an ecommerce app to buy cool sneakers. It has various features like landing page, product listing page, single product page, cart management, wishlist management, address management and login logout features.
@@ -179,19 +252,4 @@ But remember, Joker, this isn't a game. Lives are at stake, and your recklessnes
         updatedAt: "2023-03-23T16:01:00+05:30",
         comments: [],
     },
-    // {
-    //     _id: "54fd5411-50c1-4a0a-b650-2e580b503d46",
-    //     content: `Waiting for the day we will meet again after the end of warm winter, the record of Tuesday, December 13th 🎞️ Our Jin!! Come back safely!! 💜Love You💜 (https://youtu.be/L-orDkbsuHk)`,
-    //     mediaURL:
-    //         "https://res.cloudinary.com/dwdsvmvkq/image/upload/v1687309035/Social%20Media/Fj_07TdXwAIb8W5_z5fkku.jpg",
-    //     likes: {
-    //         likeCount: 2300000,
-    //         likedBy: [],
-    //         dislikedBy: [],
-    //     },
-    //     username: "bts_bighit",
-    //     createdAt: "2022-12-13T13:08:00+05:30",
-    //     updatedAt: "2022-12-13T13:08:00+05:30",
-    //     comments: [],
-    // },
 ];

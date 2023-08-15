@@ -5,7 +5,6 @@ import Header from "../../components/profile/Header";
 import Feed from "../../components/feed";
 import { useNavigate, useParams } from "react-router-dom";
 import { BsArrowLeft } from "react-icons/bs";
-// import { usePosts } from "../../contexts/PostsContext";
 import { useAuth } from "../../contexts/AuthContext";
 import { useUser } from "../../contexts/UserContext";
 import { usePost } from "../../contexts/PostContext";

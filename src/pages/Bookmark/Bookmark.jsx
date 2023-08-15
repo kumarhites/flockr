@@ -2,7 +2,6 @@ import React from "react";
 import Feed from "../../components/feed";
 import Layout from "../../components/layout";
 import Suggestions from "../../components/Suggestions/Suggestions";
-// import { useBookmark } from "../../contexts/BookmarkContext";
 import NoBookmarks from "../../components/NoBookmarks";
 import { useNavigate } from "react-router-dom";
 import { BsArrowLeft } from "react-icons/bs";

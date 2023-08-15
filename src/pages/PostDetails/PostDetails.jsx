@@ -6,7 +6,6 @@ import { BsArrowLeft } from "react-icons/bs";
 import { usePost } from "../../contexts/PostContext";
 import Post from "../../components/feed/post";
 import Comments from "../../components/Comments";
-// import Comments from "../../components/comments";
 
 const PostDetails = () => {
     const navigate = useNavigate();

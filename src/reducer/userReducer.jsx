@@ -21,8 +21,6 @@ export const userReducer = (state, { type, payload }) => {
             };
         case "SET_USER":
             return { ...state, selectedUser: payload };
-        // case "SET_SHOW_EDIT_PROFILE_MODAL":
-        //   return { ...state, showEditProfileModal: payload };
         case "EDIT_USER_PROFILE":
           return {
             ...state,
@@ -30,12 +28,6 @@ export const userReducer = (state, { type, payload }) => {
               user._id === payload._id ? payload : user
             ),
           };
-        // case "SET_SHOW_AVATAR_MODAL":
-        //   return { ...state, showAvatarModal: payload };
-        // case "SET_SHOW_SEARCH_RESULTS":
-        //   return { ...state, showSearchResults: payload };
-        // case "SET_SEARCH_INPUT":
-        //   return { ...state, searchInput: payload };
         default:
             return state;
     }
@@ -45,8 +37,4 @@ export const initialUser = {
     allUsers: [],
     allBookmarks: [],
     selectedUser: {},
-    showEditProfileModal: false,
-    showAvatarModal: false,
-    showSearchResults: false,
-    searchInput: "",
 };

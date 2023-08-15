@@ -7,7 +7,6 @@ import UnfollowBtn from "../../UnfollowBtn";
 import { useUser } from "../../../contexts/UserContext";
 import FollowBtn from "../../FollowBtn";
 import { usePost } from "../../../contexts/PostContext";
-// import { usePosts } from "../../../contexts/PostContext";
 
 const Heading = ({ postId, name, username, time, setIsOpen, isOpen }) => {
     const { currentUser } = useAuth();

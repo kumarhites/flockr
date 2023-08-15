@@ -7,10 +7,7 @@ import { useAuth } from "../../contexts/AuthContext";
 import Suggestions from "../../components/Suggestions/Suggestions";
 import Publisher from "../../components/publisher";
 import Filter from "../../components/Filter";
-// import Suggestions from "../../components/Suggestions/Suggestions";
-// import { usePosts } from "../../contexts/PostsContext";
-// import { useAuth } from "../../contexts/AuthContext";
-// import Feed from "../../components/feed";
+
 
 const Home = () => {
     const { currentUser } = useAuth();
@@ -34,7 +31,6 @@ const Home = () => {
                 ({ username }) => username === post.username
             ) || post?.username === updatedCurrentUser?.username
     );
-    // console.log(sortedPosts(displayPosts));
     return (
         <>
             <Layout>

@@ -1,39 +1,10 @@
 import React from "react";
 import { useUser } from "../contexts/UserContext";
-import { useAuth } from "../contexts/AuthContext";
-// import { useUser } from "../contexts/UserContext";
-// import { useAuth } from "../contexts/AuthContext";
 
 const FollowBtn = ({ user }) => {
-    const { currentUser } = useAuth();
-    const {
-        setUser,
-        followUserHandler,
-        unfollowUserHandler,
-        user: { allUsers },
-    } = useUser();
+    const { followUserHandler } = useUser();
 
-    const {
-        _id,
-        firstName,
-        lastName,
-        username,
-        password,
-        bio,
-        website,
-        avatar,
-        createdAt,
-        updatedAt,
-        following,
-        followers,
-    } = user;
-
-    // const followingUsers = (userId) =>
-    //   allUsers
-    //     ?.find((user) => user?._id === userId)
-    //     ?.followers?.some(
-    //       (follower) => follower?.username === currentUser?.username
-    //     );
+    const { _id } = user;
 
     const handleFollow = (userId) => {
         followUserHandler(userId);

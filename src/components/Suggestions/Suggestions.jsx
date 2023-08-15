@@ -18,9 +18,6 @@ const Suggestions = () => {
                         placeholder="Search..."
                         className="bg-transparent text-base placeholder:text-base focus:outline-none"
                     />
-                    {/* <section className="absolute top-12 left-0 border rounded-lg">
-                        <SuggestedUsers allUsers={allUsers} />
-                    </section> */}
                 </div>
             </section>
             <SuggestedUsers allUsers={allUsers} />

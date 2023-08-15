@@ -25,7 +25,6 @@ const Publisher = () => {
         } else {
             createPostHandler({ content: postContent });
         }
-        // postDispatch({ type: "SET_SHOW_ADD_NEW_POST_MODAL", payload: false });
         postDispatch({ type: "EDIT_POST", payload: null });
         setPostContent("");
     };
@@ -46,8 +45,7 @@ const Publisher = () => {
                         rows="5"
                         name="caption"
                         className="block h-full w-full resize-none rounded-lg border  border-gray-300 bg-transparent/10 p-2.5 text-gray-100 focus:border-blue-500 focus:ring-blue-500"
-                        placeholder="Write your thoughts here...
-                (Win + . ) for 😉"
+                        placeholder="Whats on your mind??"
                         value={postContent}
                         onChange={(e) => setPostContent(e.target.value)}
                     ></textarea>
