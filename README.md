@@ -63,7 +63,7 @@ To run the app locally, follow these steps:
 1. Clone the repository:
 
    ```shell
-   git clone https://github.com/kumarhites/chirpr.git
+   git clone https://github.com/kumarhites/flockr.git
    ```
 
 2. Navigate to the project directory:
