@@ -69,7 +69,7 @@ To run the app locally, follow these steps:
 2. Navigate to the project directory:
 
    ```shell
-   cd chirpr
+   cd flockr
    ```
 
 3. Install the dependencies:
